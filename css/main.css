@@ -1,0 +1,17 @@
+@media (max-width: 415px) {
+  .visible-phone {
+    display: block !important;
+  }
+  .hidden-phone {
+    display: none !important;
+  }
+}
+
+@media (min-width: 416px) {
+  .visible-phone {
+    display: none !important;
+  }
+  .hidden-phone {
+    display: block !important;
+  }
+}
