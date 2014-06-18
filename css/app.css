@@ -4,11 +4,13 @@
 }
 
 a {
+  border: none;
   text-decoration: none;
   color: inherit;
 }
 
 a:hover, a:active {
+  border: none;
   color: rgb(237, 49, 47);
 }
 
