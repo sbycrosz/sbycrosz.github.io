@@ -21,8 +21,9 @@ a:hover, a:active {
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 10px;
-  padding-top: 20px;
+  padding: 20px 0px;
   color: black;
+  background-color: #eee;
 }
 
 h1 {
@@ -83,7 +84,6 @@ h2 {
   height: 30px;
 
 }
-
 
 @media all and (max-width: 380px) {
   .contact-info a {
