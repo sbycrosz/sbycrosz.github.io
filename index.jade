@@ -5,7 +5,30 @@ html
     meta(charset="utf-8")
     meta(name="description", content="Sambya Aryasa")
     meta(name="keywords", content="Sambya Aryasa")
+    meta(name='viewport', content='width=device-width, user-scalable=no')
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,400,800', rel='stylesheet', type='text/css')
     link(rel="icon", href="assets/favicon.ico?v=1", type="image/x-icon")
     link(rel="stylesheet", type="text/css", href="styles.css")
   body
-    h1 Hello World !
+    main.container
+      section.bio
+        h1 Sambya Aryasa
+        h2 Software Developer
+        .contact-info
+          a.first(href='mailto:sambya@aryasa.net', target='_blank') Email
+          a(href='http://id.linkedin.com/in/sambya', target='_blank') LinkedIn
+          a(href='https://github.com/sbycrosz', target='_blank') GitHub
+      section.timeline
+        ul
+          li.timeline-item
+            span.year 2014
+            a.action(href='http://www.thoughtworks.com', target='_blank') Joined ThoughtWorks
+          li.timeline-item
+            span.year 2013
+            a.action(href='http://www.icehousecorp.com', target='_blank') Joined IceHouse
+          li.timeline-item
+            span.year 2009
+            a.action(href='http://www.itb.ac.id', target='_blank') Enrolled at ITB
+          li.timeline-item
+            span.year 2007
+            a.action(href='http://www.toki.or.id', target='_blank') First attempt at coding

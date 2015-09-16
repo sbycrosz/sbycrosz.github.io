@@ -1,2 +1,114 @@
+text-color = #333
+text-color-secondary = #aaa
+active-link-color = rgb(237, 49, 47)
+body-background-color = #eee
+line-color = #ccc
+
+* *
+  margin 0
+  padding 0
+
 body
-  background white
+  font-family 'Open Sans', sans-serif
+  font-size 10px
+  color text-color
+  background-color body-background-color
+  padding-bottom 100px
+
+a
+  text-decoration none
+  color inherit
+
+  &:hover, &:active
+    color active-link-color
+
+.container
+  min-width 280px
+
+.bio
+  padding 30px 0
+  text-align center
+  
+  h1
+    text-transform uppercase
+    font-size 3.5em
+    
+    @media all and (max-width: 340px)
+      font-size: 2.5em
+    
+  h2
+    font-style italic
+    font-weight 300
+    font-size 1.6em
+
+  .contact-info
+    margin-top 15px
+    font-weight 600
+    font-style italic
+    text-align center
+    a
+      font-size 1.8em
+      padding 0 10px
+      & + a
+        border-left 1px solid text-color
+
+.timeline
+  border-top 1px solid line-color
+  font-size 1.6em
+  position relative
+  
+
+.timeline-item
+  display flex
+  align-items center
+  justify-content center
+  height 50px
+
+  .year
+    color text-color-secondary
+
+@media all and (min-width: 500px)
+  .timeline-item
+    flex-direction row
+
+  .year
+    order 1 
+    
+  .year,
+  .action
+    width 40%
+
+  li:nth-child(even) .year, 
+  li:nth-child(odd) .action
+    order 3
+    text-align: left
+
+  li:nth-child(even) .action, 
+  li:nth-child(odd) .year
+    order 1
+    text-align right
+    
+  ul:before
+    content ""
+    width 2px
+    height calc(100% - 25px)
+    background-color line-color
+    position absolute
+    left 50%
+    margin-left -1px
+    
+  li:after
+    order 2
+    content ""
+    width 10px
+    height 10px
+    margin 0 30px
+    background-color darken(line-color, 20)
+    border-radius 100%
+    z-index 1
+
+
+@media all and (max-width: 500px)
+  .timeline-item
+    margin-top 10px
+    flex-direction column
