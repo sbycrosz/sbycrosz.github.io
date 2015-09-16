@@ -41,6 +41,12 @@ gulp.task('build:copyAssets', function() {
         .pipe(connect.reload());
 });
 
+
+gulp.task('build:copyCNAME', function() {
+  return gulp.src('CNAME')
+             .pipe(gulp.dest('build/'));
+});
+
 gulp.task('build:appcache', function () {
     return gulp.src('*.appcache')
         .pipe(gulp.dest('./build'))
@@ -79,6 +85,6 @@ gulp.task('clean:build', function () {
         .pipe(rimraf());
 });
 
-gulp.task('build', ['build:html', 'build:css', 'build:copyAssets', 'build:appcache']);
+gulp.task('build', ['build:html', 'build:css', 'build:copyAssets', 'build:appcache', 'build:copyCNAME']);
 
 gulp.task('default', ['serve', 'watch']);
