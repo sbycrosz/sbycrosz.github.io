@@ -18,7 +18,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "deploy": "gulp deploy"
   },
   "repository": {
     "type": "git",
